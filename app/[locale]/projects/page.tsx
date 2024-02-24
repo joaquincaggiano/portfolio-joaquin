@@ -1,13 +1,13 @@
 import {useTranslations} from 'next-intl';
 
-const Home = () => {
+const ProjectsPage = () => {
   const t = useTranslations();
   return (
     <div>
       {/* <h1 className='text-xl'>{t("Home.title")}</h1> */}
-      HOME
+      Projects
     </div>
   );
 }
-export default Home;
 
+export default ProjectsPage;

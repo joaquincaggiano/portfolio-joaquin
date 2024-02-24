@@ -1,4 +1,10 @@
 {
+  "Header": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
   "Home": {
     "presentation": "Soy una persona con mucha curiosidad, lo que me permite estar aprendiendo constantemente nuevas herramientas e implementaciones. Disfruto del trabajo en equipo para alcanzar más rápido nuestras metas y obtener en el camino experiencia de los demás. Estoy abierto a nuevas ideas y formas de trabajar para mejorar como profesional.",
     "personalInfo": "const bienvenida = () => {\n\u00A0\u00A0\u00A0const sobreMi = {\n\u00A0\u00A0\u00A0\u00A0\u00A0nombre:\u00A0 'Joaquín',\n\u00A0\u00A0\u00A0\u00A0\u00A0apellido:\u00A0 'S. Caggiano',\n\u00A0\u00A0\u00A0\u00A0\u00A0edad:\u00A0 '25',\n\u00A0\u00A0\u00A0\u00A0\u00A0idiomas:\u00A0 ['español', 'inglés'],\n\u00A0\u00A0\u00A0\u00A0\u00A0paisActual:\u00A0 'España',\n\u00A0\u00A0\u00A0\u00A0\u00A0nacionalidad:\u00A0 ['Argentina', 'Italiana'],\n\u00A0\u00A0\u00A0}\n\u00A0\u00A0\u00A0return sobreMi;\n}\n bienvenida();"

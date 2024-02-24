@@ -1,6 +1,9 @@
 {
   "Header": {
-    "home": "Home"
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
   },
   "Home": {
     "presentation": "I am a very curious person, which allows me to constantly learn new tools and implementations. I enjoy teamwork to achieve our goals faster and gain experience from others along the way. I am open to new ideas and ways of working to improve as a professional.",
