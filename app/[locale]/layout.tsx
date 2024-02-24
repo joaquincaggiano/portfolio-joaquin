@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../globals.css";
 import React from "react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ 
+  subsets: ["latin"], 
+  weight: ["400", "500", "600"] 
+});
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -20,9 +24,9 @@ const RootLayout: React.FC<Props> = ({ children, params: { locale } }) => {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
     </html>

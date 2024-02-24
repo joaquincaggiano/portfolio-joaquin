@@ -1,5 +1,9 @@
 {
-    "Home": {
-      "title": "Hello world!"
-    }
+  "Header": {
+    "home": "Home"
+  },
+  "Home": {
+    "presentation": "I am a very curious person, which allows me to constantly learn new tools and implementations. I enjoy teamwork to achieve our goals faster and gain experience from others along the way. I am open to new ideas and ways of working to improve as a professional.",
+    "personalInfo": "const welcome = () => {\n\u00A0\u00A0\u00A0const aboutMe = {\n\u00A0\u00A0\u00A0\u00A0\u00A0name:\u00A0 'Joaquín',\n\u00A0\u00A0\u00A0\u00A0\u00A0lastName:\u00A0 'S. Caggiano',\n\u00A0\u00A0\u00A0\u00A0\u00A0age:\u00A0 '25',\n\u00A0\u00A0\u00A0\u00A0\u00A0languages:\u00A0 ['spanish', 'english'],\n\u00A0\u00A0\u00A0\u00A0\u00A0currentCountry:\u00A0 'Spain',\n\u00A0\u00A0\u00A0\u00A0\u00A0nationality:\u00A0 ['Argentina', 'Italian'],\n\u00A0\u00A0\u00A0}\n\u00A0\u00A0\u00A0return aboutMe;\n}\n welcome();"
   }
+}
