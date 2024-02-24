@@ -1,7 +1,6 @@
 "use client";
 
-import { NavBarComponent } from "@/components/navigator/NavBarComponent";
-// import { SessionProvider } from "next-auth/react";
+import { NavBarComponent } from "@/components/navigator/navbar-component";
 import { NextUIProvider } from "@nextui-org/react";
 
 type Props = {
@@ -10,7 +9,6 @@ type Props = {
 
 export const Providers = ({ children }: Props) => {
   return (
-    // <SessionProvider basePath="/api/next-auth">
     <NextUIProvider>
       <header>
         <NavBarComponent />
@@ -19,6 +17,5 @@ export const Providers = ({ children }: Props) => {
         {children}
       </main>
     </NextUIProvider>
-    // </SessionProvider>
   );
 };

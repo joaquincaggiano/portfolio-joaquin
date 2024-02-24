@@ -12,6 +12,7 @@ import {
 } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import { useRouter, useSelectedLayoutSegment } from "next/navigation";
+import LocaleSwitcher from "../switcher/locale-switcher";
 
 export const NavBarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +30,7 @@ export const NavBarComponent = () => {
 
   return (
     <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+      {/* Logo menu */}
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -40,6 +42,7 @@ export const NavBarComponent = () => {
         </NavbarBrand> */}
       </NavbarContent>
 
+      {/* Items menus navigator */}
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {menuItems.map((menu) => {
           return (
@@ -59,9 +62,15 @@ export const NavBarComponent = () => {
           );
         })}
       </NavbarContent>
+
+      {/* Switcher */}
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">Cambiar idioma</NavbarItem>
+        <NavbarItem className="hidden lg:flex">
+          <LocaleSwitcher />
+        </NavbarItem>
       </NavbarContent>
+
+      {/* Items menu hamburguesa */}
       <NavbarMenu>
         {menuItems.map((menu, index) => (
           <NavbarMenuItem
