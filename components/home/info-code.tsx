@@ -7,7 +7,7 @@ const InfoCode = () => {
   const t = useTranslations("Home");
 
   return (
-    <div className="p-4">
+    <div className="p-4 text-xs md:text-base xl:text-xl">
       <span style={{ color: pallete.blueLight }}>const</span>{" "}
       {t("nameFunction")} <span>=</span>{" "}
       <span style={{ color: pallete.blueLight }}>{"()"}</span>{" "}

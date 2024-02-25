@@ -2,7 +2,7 @@
 
 import { NavBarComponent } from "@/components/navigator/navbar-component";
 import { NextUIProvider } from "@nextui-org/react";
-import {ThemeProvider as NextThemesProvider} from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 type Props = {
   children?: React.ReactNode;
@@ -15,7 +15,7 @@ export const Providers = ({ children }: Props) => {
         <header>
           <NavBarComponent />
         </header>
-        <main className="min-h-screen min-w-screen px-24 pt-20 flex flex-col">
+        <main className="min-h-screen min-w-screen px-8 pt-10 sm:px-16 md:px-24 lg:px-16 lg:pt-20 flex flex-col">
           {children}
         </main>
       </NextThemesProvider>

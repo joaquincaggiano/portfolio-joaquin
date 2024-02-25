@@ -9,20 +9,27 @@ const Home = () => {
   const t = useTranslations("Home");
 
   return (
-    <div className="flex gap-28">
+    <div className="flex flex-col lg:flex-row gap-16">
       {/* Presentación */}
-      <div className="w-full max-w-[50%] flex flex-col">
-        <h1 className="text-5xl mb-5">
-          {t("welcome")}{" "}
-          <span style={{ color: pallete.blueLight }}>Joaquín</span> Frontend
-          Developer 👨🏼‍💻
-        </h1>
-        <div className="text-lg">{t("presentation")}</div>
+      <div className="flex flex-col w-full lg:max-w-[50%]">
+        {/* Saludo */}
+        <div className="w-full max-w-[300px] self-center lg:max-w-[100%]">
+          <h1 className="text-2xl lg:text-3xl xl:text-4xl mb-5 text-center lg:text-start">
+            {t("welcome")}{" "}
+            <span style={{ color: pallete.blueLight }}>Joaquín</span> Frontend
+            Developer 👨🏼‍💻
+          </h1>
+        </div>
+
+        {/* Breve texto de cómo soy */}
+        <div className="text-lg lg:text-xl xl:text-2xl text-center w-full max-w-[500px] self-center md:max-w-[600px] lg:max-w-[100%] lg:text-start">
+          {t("presentation")}
+        </div>
       </div>
 
       {/* Datos personales - VSC */}
       <div
-        className="flex flex-col w-full max-w-[50%] rounded-md text-md bg-zinc-900"
+        className="flex flex-col w-full lg:max-w-[50%] rounded-md text-md bg-zinc-900 mb-10"
         style={{ borderWidth: 0.5 }}
       >
         {/* Barra de VSC */}
@@ -36,12 +43,12 @@ const Home = () => {
             <div className="rounded-full bg-green-500 w-[10px] h-[10px]" />
           </div>
 
-          <div className="rounded-md w-full max-w-[200px] p-2 flex items-center justify-center gap-2 text-xs bg-zinc-800">
-            <Image src={LupaLogo} width={10} height={10} alt="Lupa" />
+          <div className="rounded-md w-full max-w-[200px] p-2 flex items-center justify-center gap-2 text-xs lg:text-base bg-zinc-800">
+            <Image src={LupaLogo} className="w-3 h-3 md:w-4 sm:h-4" alt="Lupa" />
             portfolio-joaquin
           </div>
 
-          <div className="w-full max-w-[30px]" />
+          <div className="flex w-full max-w-[30px]" />
         </div>
 
         {/* Barra vertical y código */}
@@ -62,13 +69,14 @@ const Home = () => {
           <div className="flex flex-col w-full">
             <div>
               <div
-                className="flex items-center gap-2 p-2 w-full max-w-[120px]"
+                className="flex items-center gap-2 p-2 w-full max-w-[100px] md:max-w-[120px] text-xs md:text-base lg:text-lg"
                 style={{ borderRightWidth: 0.5 }}
               >
                 <Image
                   src={ReactLogo}
-                  width={16}
-                  height={16}
+                  className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5"
+                  // width={16}
+                  // height={16}
                   alt="React logo"
                 />
                 page.tsx

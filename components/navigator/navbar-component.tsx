@@ -13,6 +13,7 @@ import {
 import { useTranslations } from "next-intl";
 import { useRouter, useSelectedLayoutSegment } from "next/navigation";
 import LocaleSwitcher from "../switcher/locale-switcher";
+import { pallete } from "@/styles/pallete";
 
 export const NavBarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,14 +51,12 @@ export const NavBarComponent = () => {
               key={menu.title}
               onClick={() => router.push(menu.link)}
               className="cursor-pointer"
+              style={{
+                color: pathname === menu.link ? pallete.blueLight : "#FFF",
+              }}
             >
-              <div
-                className={`${
-                  pathname === menu.link ? "text-blue-500" : "text-white"
-                }`}
-              >
+              
                 {menu.title}
-              </div>
             </NavbarItem>
           );
         })}
@@ -65,7 +64,7 @@ export const NavBarComponent = () => {
 
       {/* Switcher */}
       <NavbarContent justify="end">
-        <NavbarItem >
+        <NavbarItem>
           <LocaleSwitcher />
         </NavbarItem>
       </NavbarContent>
