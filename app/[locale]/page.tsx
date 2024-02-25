@@ -1,12 +1,22 @@
+"use client";
+
 import { pallete } from "@/styles/pallete";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import InfoCode from "@/components/home/info-code";
 import LupaLogo from "@/public/icons/lupa.svg";
 import ReactLogo from "@/public/icons/react.svg";
+import EyeLogo from "@/public/icons/eye.svg";
 import Image from "next/image";
+import AppButton from "@/components/buttons/AppButton";
+import { Button } from "@nextui-org/react";
 
 const Home = () => {
   const t = useTranslations("Home");
+  // const localActive = useLocale();
+
+  const openPDF = () => {
+    console.log("mostrar pdf")
+  };
 
   return (
     <div className="flex flex-col lg:flex-row gap-16">
@@ -25,6 +35,24 @@ const Home = () => {
         <div className="text-lg lg:text-xl xl:text-2xl text-center w-full max-w-[500px] self-center md:max-w-[600px] lg:max-w-[100%] lg:text-start">
           {t("presentation")}
         </div>
+
+        {/* Boton ver CV */}
+        <Button
+          variant="bordered"
+          className="border-2 w-full max-w-[120px] mt-5"
+          style={{ borderColor: pallete.blueLight }}
+          onClick={openPDF}
+        >
+          {t("viewCV")}
+
+          <Image
+            src={EyeLogo}
+            width={20}
+            height={20}
+            className="mb-[1.5px] ml-1"
+            alt="eye logo"
+          />
+        </Button>
       </div>
 
       {/* Datos personales - VSC */}
@@ -44,7 +72,11 @@ const Home = () => {
           </div>
 
           <div className="rounded-md w-full max-w-[200px] p-2 flex items-center justify-center gap-2 text-xs lg:text-base bg-zinc-800">
-            <Image src={LupaLogo} className="w-3 h-3 md:w-4 sm:h-4" alt="Lupa" />
+            <Image
+              src={LupaLogo}
+              className="w-3 h-3 md:w-4 sm:h-4"
+              alt="Lupa"
+            />
             portfolio-joaquin
           </div>
 
@@ -75,8 +107,6 @@ const Home = () => {
                 <Image
                   src={ReactLogo}
                   className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5"
-                  // width={16}
-                  // height={16}
                   alt="React logo"
                 />
                 page.tsx

@@ -8,7 +8,6 @@
   "Home": {
     "welcome": "Hello 🖖🏻! I am",
     "presentation": "I consider myself a very curious person, which allows me to constantly learn new tools and implementations. I enjoy teamwork and collaboration between everyone to achieve objectives. I am open to new ideas and ways of working to improve as a professional.",
-
     "nameFunction": "welcome",
     "aboutMe": "aboutMe",
     "name": "name",
@@ -21,6 +20,7 @@
     "spain": "Spain",
     "nationality": "nationality",
     "argentina": "Argentina",
-    "italian": "Italian"
+    "italian": "Italian",
+    "viewCV": "View CV"
   }
 }
