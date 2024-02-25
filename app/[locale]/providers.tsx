@@ -15,7 +15,7 @@ export const Providers = ({ children }: Props) => {
         <header>
           <NavBarComponent />
         </header>
-        <main className="min-h-screen min-w-screen p-5 flex flex-col">
+        <main className="min-h-screen min-w-screen px-24 pt-20 flex flex-col">
           {children}
         </main>
       </NextThemesProvider>
