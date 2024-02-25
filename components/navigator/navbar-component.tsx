@@ -53,7 +53,7 @@ export const NavBarComponent = () => {
             >
               <div
                 className={`${
-                  pathname === menu.link ? "text-blue-500" : "text-black"
+                  pathname === menu.link ? "text-blue-500" : "text-white"
                 }`}
               >
                 {menu.title}
