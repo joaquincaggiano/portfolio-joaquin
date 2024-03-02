@@ -30,17 +30,17 @@ export const NavBarComponent = () => {
   ];
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className="rounded-lg" style={{borderWidth: 0.5, borderColor: pallete.blueLight}}>
       {/* Logo menu */}
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        {/* <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
-        </NavbarBrand> */}
+        <NavbarBrand className="hidden md:flex">
+          {/* <AcmeLogo /> */}
+          <span className="font-bold text-xl"><span style={{color: pallete.blueLight}}>{"<J"}</span>oaquín <span style={{color: pallete.blueLight}}>{"/>"}</span></span>
+        </NavbarBrand>
       </NavbarContent>
 
       {/* Items menus navigator */}

@@ -31,10 +31,12 @@ const LocaleSwitcher = () => {
     <>
       <AppButton
         variant="bordered"
+        className="border-0"
+        // className="border-blue-light border-1"
         title={localActive.toUpperCase()}
         onPress={() => setOpenModal(!openModal)}
-        width={localActive === "es" ? 24 : 22}
-        height={localActive === "es" ? 24 : 22}
+        width={22}
+        height={22}
         icon={
           localActive === "es"
             ? SpainFlag
@@ -43,14 +45,14 @@ const LocaleSwitcher = () => {
       />
 
       {openModal && (
-        <Card className="absolute top-16 w-full max-w-[100px]">
+        <Card className="absolute top-14 w-full max-w-[100px]" style={{boxShadow: "0px 0px 10px 2px #00a8ef"}}>
           <CardBody className="flex flex-col">
             <button disabled={isPending} className="flex justify-between w-full mb-3" onClick={() => onSelectChange("es")}>
               ES
               <Image
                 src={SpainFlag}
-                width={26}
-                height={26}
+                width={22}
+                height={22}
                 alt="Bandera de españa"
               />
             </button>

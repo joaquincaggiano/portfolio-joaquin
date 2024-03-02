@@ -12,7 +12,9 @@ const config: Config = {
     extend: {
       colors: {
         "blue-dark": "#006aa0",
-        "border-blue-dark": "#006aa0"
+        "blue-light": "#00a8ef",
+        "border-blue-dark": "#006aa0",
+        "border-blue-light": "#00a8ef",
       }
     },
   },

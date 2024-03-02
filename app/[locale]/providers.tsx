@@ -12,10 +12,10 @@ export const Providers = ({ children }: Props) => {
   return (
     <NextUIProvider>
       <NextThemesProvider attribute="class" defaultTheme="dark">
-        <header>
+        <header className="px-8 sm:px-16 md:px-24 lg:px-16 pt-8">
           <NavBarComponent />
         </header>
-        <main className="min-h-screen min-w-screen px-8 pt-10 sm:px-16 md:px-24 lg:px-16 lg:pt-20 flex flex-col">
+        <main className="min-h-screen min-w-screen px-8 pt-10 sm:px-16 md:px-24 lg:px-16 lg:pt-24 flex flex-col">
           {children}
         </main>
       </NextThemesProvider>
