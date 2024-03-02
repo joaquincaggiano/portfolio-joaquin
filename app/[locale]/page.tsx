@@ -1,18 +1,71 @@
 "use client";
 
-import { pallete } from "@/styles/pallete";
 import { useLocale, useTranslations } from "next-intl";
-import EyeLogo from "@/public/icons/eye.svg";
+import Vsc from "@/components/home/vsc";
+import CardSkill from "@/components/cards/card-skill";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
-import Vsc from "@/components/home/vsc";
+import { pallete } from "@/styles/pallete";
+
+import EyeLogo from "@/public/icons/eye.svg";
+import ReactLogo from "@/public/icons/react.svg";
+import FirebaseLogo from "@/public/icons/firebase.svg";
+import JSLogo from "@/public/icons/js.svg";
+import TSLogo from "@/public/icons/ts.svg";
+import PrismaLogo from "@/public/icons/prisma.svg";
+import NodeLogo from "@/public/icons/node.svg";
+import NextLogo from "@/public/icons/next.svg";
+import PostgresLogo from "@/public/icons/postgres.svg";
 
 const Home = () => {
-  const t = useTranslations("Home");
+  const t = useTranslations();
+
+  const skills = [
+    {
+      name: "Javascript",
+      icon: JSLogo,
+      description: t("ModalSkills.js")
+    },
+    {
+      name: "Next.js",
+      icon: NextLogo,
+      description: t("ModalSkills.next")
+    },
+    {
+      name: "React / Native",
+      icon: ReactLogo,
+      description: t("ModalSkills.react")
+    },
+    {
+      name: "Firebase",
+      icon: FirebaseLogo,
+      description: t("ModalSkills.firebase")
+    },
+    {
+      name: "Typescript",
+      icon: TSLogo,
+      description: t("ModalSkills.ts")
+    },
+    {
+      name: "Node.js",
+      icon: NodeLogo,
+      description: t("ModalSkills.node")
+    },
+    {
+      name: "Prisma",
+      icon: PrismaLogo,
+      description: t("ModalSkills.prisma")
+    },
+    {
+      name: "Postgres",
+      icon: PostgresLogo,
+      description: t("ModalSkills.postgres"),
+    },
+  ];
   // const localActive = useLocale();
 
   const openPDF = () => {
-    console.log("mostrar pdf")
+    console.log("mostrar pdf");
   };
 
   return (
@@ -23,7 +76,7 @@ const Home = () => {
           {/* Saludo */}
           <div className="w-full max-w-[300px] self-center md:max-w-[400px] lg:max-w-[100%]">
             <h1 className="text-2xl md:text-3xl xl:text-4xl mb-5 text-center lg:text-start">
-              {t("welcome")}{" "}
+              {t("Home.welcome")}{" "}
               <span style={{ color: pallete.blueLight }}>Joaquín</span> Frontend
               Developer 👨🏼‍💻
             </h1>
@@ -31,17 +84,16 @@ const Home = () => {
 
           {/* Breve texto de cómo soy */}
           <div className="text-lg lg:text-xl xl:text-2xl text-center w-full max-w-[500px] self-center md:max-w-[600px] lg:max-w-[100%] lg:text-start">
-            {t("presentation")}
+            {t("Home.presentation")}
           </div>
 
           {/* Boton ver CV */}
           <Button
             variant="bordered"
-            className="border-2 w-full max-w-[120px] mt-5"
-            style={{ borderColor: pallete.blueLight }}
+            className="w-full max-w-[120px] mt-5 border-blue-dark hover:bg-blue-dark"
             onClick={openPDF}
           >
-            {t("viewCV")}
+            {t("Home.viewCV")}
 
             <Image
               src={EyeLogo}
@@ -58,7 +110,15 @@ const Home = () => {
       </div>
 
       {/* Skills */}
-      <h2 className="text-center text-2xl md:text-3xl mb-10">{t("skills")}</h2>
+      <h2 className="text-center text-2xl md:text-3xl mb-7">{t("Home.skills")}</h2>
+
+      <div className="columns-2 mb-10 sm:w-full sm:max-w-[500px] sm:self-center sm:flex sm:flex-wrap sm:justify-between sm:items-center sm:gap-5">
+        {skills.map((skill) => {
+          return (
+            <CardSkill key={skill.name} name={skill.name} icon={skill.icon} description={skill.description} />
+          );
+        })}
+      </div>
     </>
   );
 };
