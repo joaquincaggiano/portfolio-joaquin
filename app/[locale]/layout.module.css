@@ -1,0 +1,6 @@
+.container {
+    background-image: url("../../public/img/space.jpeg");
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    /* aspect-ratio: 1.77725118; */
+}

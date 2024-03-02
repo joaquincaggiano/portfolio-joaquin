@@ -5,6 +5,9 @@ import React from "react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Providers } from "./providers";
 
+import styles from "./layout.module.css"
+
+
 const poppins = Poppins({ 
   subsets: ["latin"], 
   weight: ["400", "500", "600"] 
@@ -24,7 +27,7 @@ const RootLayout: React.FC<Props> = ({ children, params: { locale } }) => {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={poppins.className}>
+      <body className={`${poppins.className} ${styles.container}`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
         </NextIntlClientProvider>
