@@ -24,42 +24,42 @@ const Home = () => {
     {
       name: "Javascript",
       icon: JSLogo,
-      description: t("ModalSkills.js")
+      description: t("Skills.js")
     },
     {
       name: "Next.js",
       icon: NextLogo,
-      description: t("ModalSkills.next")
+      description: t("Skills.next")
     },
     {
       name: "React / Native",
       icon: ReactLogo,
-      description: t("ModalSkills.react")
+      description: t("Skills.react")
     },
     {
       name: "Firebase",
       icon: FirebaseLogo,
-      description: t("ModalSkills.firebase")
+      description: t("Skills.firebase")
     },
     {
       name: "Typescript",
       icon: TSLogo,
-      description: t("ModalSkills.ts")
+      description: t("Skills.ts")
     },
     {
       name: "Node.js",
       icon: NodeLogo,
-      description: t("ModalSkills.node")
+      description: t("Skills.node")
     },
     {
       name: "Prisma",
       icon: PrismaLogo,
-      description: t("ModalSkills.prisma")
+      description: t("Skills.prisma")
     },
     {
       name: "Postgres",
       icon: PostgresLogo,
-      description: t("ModalSkills.postgres"),
+      description: t("Skills.postgres"),
     },
   ];
   // const localActive = useLocale();
@@ -110,7 +110,7 @@ const Home = () => {
       </div>
 
       {/* Skills */}
-      <h2 className="text-center text-2xl md:text-3xl mb-7">{t("Home.skills")}</h2>
+      <h2 className="text-center text-2xl md:text-3xl mb-7">{t("Skills.title")}</h2>
 
       <div className="columns-2 mb-10 sm:w-full sm:max-w-[500px] sm:self-center sm:flex sm:flex-wrap sm:justify-between sm:items-center sm:gap-5">
         {skills.map((skill) => {
