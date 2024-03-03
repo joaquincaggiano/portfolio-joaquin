@@ -58,8 +58,8 @@ const ProjectsPage = () => {
   return (
     <div>
       <div className="flex flex-wrap gap-8 justify-center items-center mb-10">
-        {projects.map(project => {
-          return <ProjectCard project={project} />
+        {projects.map((project) => {
+          return <ProjectCard key={project.title} project={project} />;
         })}
       </div>
     </div>
