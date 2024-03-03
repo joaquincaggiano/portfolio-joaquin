@@ -30,7 +30,11 @@ export const NavBarComponent = () => {
   ];
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className="rounded-lg" style={{borderWidth: 0.5, borderColor: pallete.blueLight}}>
+    <Navbar 
+      isMenuOpen={isMenuOpen} 
+      onMenuOpenChange={setIsMenuOpen} 
+      className="bg-transparent" 
+    >
       {/* Logo menu */}
       <NavbarContent>
         <NavbarMenuToggle

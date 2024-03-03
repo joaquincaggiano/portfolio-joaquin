@@ -41,7 +41,9 @@ const ProjectCard = ({ project }: Props) => {
           backgroundSize: "cover",
         }}
       />
-      <div className={`${styles.back} flex flex-col justify-between bg-gradient-to-r from-blue-dark to-black`}>
+      <div
+        className={`${styles.back} flex flex-col justify-between bg-gradient-to-r from-blue-dark to-black`}
+      >
         <section className="flex flex-col">
           <h2 className="text-xl md:text-2xl mb-4">{title}</h2>
           <p>{description}</p>
@@ -51,11 +53,13 @@ const ProjectCard = ({ project }: Props) => {
           <span className="text-xs">{!amITheOwner && t("common.desaway")}</span>
 
           <AppButton
-            className="self-end border-blue-light hover:bg-blue-light"
+            className="self-end border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light"
             variant="bordered"
             onPress={redirectToExternalPage}
           >
-            <a ref={linkRef} href={link} target="_blank">{buttonTitle}</a>
+            <a ref={linkRef} href={link} target="_blank">
+              {buttonTitle}
+            </a>
           </AppButton>
         </section>
       </div>

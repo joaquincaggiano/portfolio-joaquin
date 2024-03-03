@@ -90,7 +90,7 @@ const Home = () => {
           {/* Boton ver CV */}
           <Button
             variant="bordered"
-            className="w-full max-w-[120px] mt-5 border-blue-dark hover:bg-blue-dark"
+            className="w-full max-w-[120px] mt-5 border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light"
             onClick={openPDF}
           >
             {t("Home.viewCV")}

@@ -12,7 +12,7 @@ import UserLogo from "@/public/icons/user.svg";
 const Vsc = () => {
   return (
     <div
-      className="flex flex-col w-full lg:max-w-[50%] rounded-md text-md bg-zinc-900 mb-10"
+      className="flex flex-col w-full lg:max-w-[50%] rounded-md text-md bg-gradient-to-r from-zinc-800 to-zinc-900 mb-10"
       style={{ borderWidth: 0.5 }}
     >
       {/* Barra de VSC */}

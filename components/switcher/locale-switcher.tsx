@@ -21,7 +21,7 @@ const LocaleSwitcher = () => {
 
   const onSelectChange = (nextLocale: string) => {
     // const nextLocale = e.target.value;
-    console.log("nextLocale: ", nextLocale);
+    // console.log("nextLocale: ", nextLocale);
     startTransition(() => {
       router.replace(`/${pathname}`, { locale: nextLocale });
     });
@@ -45,7 +45,7 @@ const LocaleSwitcher = () => {
       />
 
       {openModal && (
-        <Card className="absolute top-14 w-full max-w-[100px]" style={{boxShadow: "0px 0px 10px 2px #00a8ef"}}>
+        <Card className="absolute top-14 w-full max-w-[100px] bg-gradient-to-r from-blue-dark to-blue-light">
           <CardBody className="flex flex-col">
             <button disabled={isPending} className="flex justify-between w-full mb-3" onClick={() => onSelectChange("es")}>
               ES
