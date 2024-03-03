@@ -1,0 +1,57 @@
+"use client";
+
+import styles from "./project-card.module.css";
+import AppButton from "../buttons/AppButton";
+import { useTranslations } from "next-intl";
+import { pallete } from "@/styles/pallete";
+
+interface Props {
+  project: {
+    image: string;
+    title: string;
+    description: string;
+    amITheOwner: boolean;
+    link: string;
+    buttonTitle: string;
+  };
+}
+
+const ProjectCard = ({ project }: Props) => {
+  const { image, title, description, amITheOwner, link, buttonTitle } = project;
+
+  const t = useTranslations();
+
+  return (
+    <div
+      className={`${styles.card} relative cursor-pointer w-full max-w-[250px] h-[300px] sm:max-w-[240px] sm:h-[320px] md:max-w-[270px] md:h-[360px] xl:max-w-[300px] xl:h-[380px]`}
+    >
+      <div
+        className={styles.front}
+        style={{
+          background: `url(${image}) top no-repeat`,
+          backgroundSize: "cover",
+        }}
+      />
+      <div className={`${styles.back} flex flex-col justify-between`}>
+        <section className="flex flex-col">
+          <h2 className="text-xl md:text-2xl mb-4">{title}</h2>
+          <p>{description}</p>
+        </section>
+
+        <section className="flex justify-between items-center">
+          <span className="text-xs">{!amITheOwner && t("common.desaway")}</span>
+
+          <AppButton
+            className="self-end border-blue-light hover:bg-blue-light"
+            variant="bordered"
+            onPress={() => console.log("hola")}
+          >
+            {buttonTitle}
+          </AppButton>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

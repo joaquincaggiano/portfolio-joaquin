@@ -1,6 +1,9 @@
 {
   "common": {
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "download": "Descarga",
+    "website": "Sitio web",
+    "desaway": "Propiedad de Desaway"
   },
   "Header": {
     "home": "Inicio",
@@ -36,5 +39,14 @@
     "node": "Node.js es un entorno de ejecución de JavaScript multiplataforma y de código abierto. Una aplicación Node.js se ejecuta en un solo proceso, sin crear un nuevo hilo para cada solicitud. Cuando Node.js realiza una operación de E/S, como acceder a una base de datos, en lugar de bloquear el subproceso y desperdiciar ciclos de CPU esperando, Node.js reanudará las operaciones cuando llegue la respuesta.Esto permite a Node.js manejar miles de conexiones simultáneas con un único servidor.",
     "prisma": "Prisma es un ORM de código abierto de próxima generación. Consta de las siguientes partes: Prisma Client: generador de consultas generado automáticamente y con seguridad de tipos para Node.js y TypeScript. Prisma Migrate: sistema de migración. Prisma Studio: GUI para ver y editar datos en su base de datos. Prisma Client se puede utilizar en cualquier aplicación backend de Node.js o TypeScript. Puede ser una API REST, una API GraphQL, una API gRPC o cualquier otra cosa que necesite una base de datos.",
     "postgres": "PostgreSQL es un potente sistema de base de datos relacional de objetos de código abierto que utiliza y amplía el lenguaje SQL combinado con muchas funciones que almacenan y escalan de forma segura las cargas de trabajo de datos más complicadas. PostgreSQL viene con muchas funciones destinadas a ayudar a los desarrolladores a crear aplicaciones, a proteger la integridad de los datos, a crear entornos tolerantes a fallas, y ayudarlos a administrar sus datos sin importar cuán grande o pequeño sea el conjunto de datos."
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "bitePlanner": "Planificador y organizador de comidas desarrollado con React Native y MobX. Crea planes de comida personalizados para cada día de la semana, asegurando una alimentación balanceada y variada.",
+    "stopXenofobia": "Aplicación desarrollada con React Native destinada a informar sobre los recursos disponibles para la garantía de los derechos humanos ante el racismo y la xenofobia.",
+    "pokedex": "Descubre y analiza los primeros 150 pokemón. Aplicación desarrollada con React Native donde utilizo una API de terceros para obtener la información.",
+    "moviesDB": "Investiga los últimos estrenos, las películas más populares y descubre su sinopsis. Aplicación desarrollada con React Native donde utilizo una API de terceros para obtener la información.",
+    "calculator": "Proyecto llevado a cabo con React Native donde busco imitar la calculadora de iOS. Posee las principales funciones de suma, resta, división, multiplicación.",
+    "rogerRestaurant": "Sitio web de reservas en restaurantes desarrollado con Next.Js. El dueño del restaurante podrá obtener todos los datos de las mismas para realizar un seguimiento minucioso."
   }
 }

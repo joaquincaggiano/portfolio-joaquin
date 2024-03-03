@@ -1,6 +1,9 @@
 {
   "common": {
-    "close": "Close"
+    "close": "Close",
+    "download": "Download",
+    "website": "Website",
+    "desaway": "Property of Desaway"
   },
   "Header": {
     "home": "Home",
@@ -36,5 +39,14 @@
     "node": "Node.js is an open source, cross-platform JavaScript runtime environment. A Node.js application runs in a single process, without creating a new thread for each request. When Node.js performs an I/O operation, such as accessing a database, instead of blocking the thread and wasting CPU cycles waiting, Node.js will resume operations when the response arrives. This allows Node.js to handle thousands of simultaneous connections to a single server.",
     "prisma": "Prisma is an open-source next-generation ORM. It consists of the following parts: Prisma Client: Auto-generated and type-safe query builder for Node.js & TypeScript. Prisma Migrate: Migration system. Prisma Studio: GUI to view and edit data in your database. Prisma Client can be used in any Node.js or TypeScript backend application. This can be a REST API, a GraphQL API, a gRPC API, or anything else that needs a database.",
     "postgres": "PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads. PostgreSQL comes with many features aimed at help developers build applications, protect data integrity, create fault-tolerant environments, and help them manage their data no matter how big or small the dataset is."
+  },
+  "Projects": {
+    "title": "Projects",
+    "bitePlanner": "Meal planner and organizer developed with React Native and MobX. Create personalized meal plans for each day of the week, ensuring a balanced and varied diet.",
+    "stopXenofobia": "Application developed with React Native intended to inform about the resources available to guarantee human rights against racism and xenophobia.",
+    "pokedex": "Discover and analyze the first 150 pokemon. Application developed with React Native where I use a third-party API to obtain the information.",
+    "moviesDB": "Research the latest releases, the most popular movies and discover their synopsis. Application developed with React Native where I use a third-party API to obtain the information.",
+    "calculator": "Project carried out with React Native where I seek to imitate the iOS calculator. It has the main functions of addition, subtraction, division, multiplication.",
+    "rogerRestaurant": "Restaurant reservation website developed with Next.Js. The restaurant owner will be able to obtain all the data from them to carry out detailed monitoring."
   }
 }
