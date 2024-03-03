@@ -42,21 +42,23 @@ const Vsc = () => {
         >
           <div className="flex flex-col gap-4">
             <div className="mt-5">
-              <Image src={FilesLogo} width={24} height={24} alt="files logo" />
+              <Image
+                src={FilesLogo}
+                className="w-5 h-5 md:w-6 md:h-6"
+                alt="files logo"
+              />
             </div>
             <div>
               <Image
                 src={LupavscLogo}
-                width={24}
-                height={24}
+                className="w-5 h-5 md:w-6 md:h-6"
                 alt="lupa vsc logo"
               />
             </div>
             <div>
               <Image
                 src={GitLogo}
-                width={24}
-                height={24}
+                className="w-5 h-5 md:w-6 md:h-6"
                 alt="git logo"
               />
             </div>
@@ -66,16 +68,14 @@ const Vsc = () => {
             <div>
               <Image
                 src={UserLogo}
-                width={24}
-                height={24}
+                className="w-5 h-5 md:w-6 md:h-6"
                 alt="user logo"
               />
             </div>
             <div>
               <Image
                 src={SettingsLogo}
-                width={24}
-                height={24}
+                className="w-5 h-5 md:w-6 md:h-6"
                 alt="settings logo"
               />
             </div>
