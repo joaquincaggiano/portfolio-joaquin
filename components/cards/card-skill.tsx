@@ -39,15 +39,15 @@ const CardSkill = ({ name, icon, description }: Props) => {
         <h4 className="mt-3 text-base">{name}</h4>
       </div>
 
-      <Modal isOpen={openModal} onOpenChange={setOpenModal} backdrop="blur" placement="center">
+      <Modal isOpen={openModal} onOpenChange={setOpenModal} backdrop="blur" placement="top-center">
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className="text-lg sm:text-xl lg:text-2xl font-semibold">
                 {name}
               </ModalHeader>
               <ModalBody>
-                <p>
+                <p className="text-sm sm:text-base lg:text-lg font-normal">
                   {description}
                 </p>
               </ModalBody>
