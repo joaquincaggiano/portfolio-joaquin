@@ -27,7 +27,7 @@ const RootLayout: React.FC<Props> = ({ children, params: { locale } }) => {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={`${poppins.className} ${styles.container}`}>
+      <body /*className={`${poppins.className} ${styles.container}`}*/ className={poppins.className}>
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
         </NextIntlClientProvider>
