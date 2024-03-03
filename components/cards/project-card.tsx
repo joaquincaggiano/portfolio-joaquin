@@ -45,15 +45,15 @@ const ProjectCard = ({ project }: Props) => {
         className={`${styles.back} flex flex-col justify-between bg-gradient-to-r from-blue-dark to-black`}
       >
         <section className="flex flex-col">
-          <h2 className="text-xl md:text-2xl mb-4 font-semibold">{title}</h2>
-          <p className="text-sm font-normal">{description}</p>
+          <h2 className="text-lg sm:text-xl md:text-2xl mb-4 font-semibold">{title}</h2>
+          <p className="text-xs sm:text-sm md:text-base font-normal">{description}</p>
         </section>
 
         <section className="flex justify-between items-center">
           <span className="text-xs font-normal">{!amITheOwner && t("common.desaway")}</span>
 
           <AppButton
-            className="border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light font-medium"
+            className="border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light hover:border-0 font-medium"
             variant="bordered"
             onPress={redirectToExternalPage}
           >

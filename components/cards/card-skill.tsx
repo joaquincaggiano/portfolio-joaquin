@@ -54,7 +54,7 @@ const CardSkill = ({ name, icon, description }: Props) => {
               <ModalFooter>
                 <Button
                   variant="bordered"
-                  className="border-blue-dark hover:bg-blue-dark"
+                  className="border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light font-medium hover:border-0"
                   onPress={onClose}
                 >
                   {t("common.close")}
