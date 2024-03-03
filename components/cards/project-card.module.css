@@ -23,7 +23,7 @@
 }
 
 .card .back {
-  background: #000000;
+  /* background: #000000; */
   padding: 20px;
   transform: perspective(500px) rotateY(180deg);
 }

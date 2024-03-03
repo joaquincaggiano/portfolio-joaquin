@@ -41,7 +41,7 @@ const ProjectCard = ({ project }: Props) => {
           backgroundSize: "cover",
         }}
       />
-      <div className={`${styles.back} flex flex-col justify-between`}>
+      <div className={`${styles.back} flex flex-col justify-between bg-gradient-to-r from-blue-dark to-black`}>
         <section className="flex flex-col">
           <h2 className="text-xl md:text-2xl mb-4">{title}</h2>
           <p>{description}</p>
