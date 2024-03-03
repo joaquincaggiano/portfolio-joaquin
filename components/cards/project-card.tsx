@@ -3,7 +3,7 @@
 import styles from "./project-card.module.css";
 import AppButton from "../buttons/AppButton";
 import { useTranslations } from "next-intl";
-import { pallete } from "@/styles/pallete";
+import { useRef } from "react";
 
 interface Props {
   project: {
@@ -21,9 +21,18 @@ const ProjectCard = ({ project }: Props) => {
 
   const t = useTranslations();
 
+  const linkRef = useRef<HTMLAnchorElement>(null);
+
+  const redirectToExternalPage = () => {
+    // Simular clic en el enlace al hacer clic en el botón
+    if (linkRef.current) {
+      linkRef.current.click();
+    }
+  };
+
   return (
     <div
-      className={`${styles.card} relative cursor-pointer w-full max-w-[250px] h-[300px] sm:max-w-[240px] sm:h-[320px] md:max-w-[270px] md:h-[360px] xl:max-w-[300px] xl:h-[380px]`}
+      className={`${styles.card} relative w-full max-w-[250px] h-[300px] sm:max-w-[240px] sm:h-[320px] md:max-w-[270px] md:h-[360px] xl:max-w-[300px] xl:h-[380px]`}
     >
       <div
         className={styles.front}
@@ -44,9 +53,9 @@ const ProjectCard = ({ project }: Props) => {
           <AppButton
             className="self-end border-blue-light hover:bg-blue-light"
             variant="bordered"
-            onPress={() => console.log("hola")}
+            onPress={redirectToExternalPage}
           >
-            {buttonTitle}
+            <a ref={linkRef} href={link} target="_blank">{buttonTitle}</a>
           </AppButton>
         </section>
       </div>
