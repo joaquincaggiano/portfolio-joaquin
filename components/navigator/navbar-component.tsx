@@ -42,7 +42,6 @@ export const NavBarComponent = () => {
           className="sm:hidden"
         />
         <NavbarBrand className="hidden md:flex">
-          {/* <AcmeLogo /> */}
           <span className="font-bold text-xl"><span style={{color: pallete.blueLight}}>{"<J"}</span>oaquín <span style={{color: pallete.blueLight}}>{"/>"}</span></span>
         </NavbarBrand>
       </NavbarContent>
@@ -74,7 +73,7 @@ export const NavBarComponent = () => {
       </NavbarContent>
 
       {/* Items menu hamburguesa */}
-      <NavbarMenu>
+      <NavbarMenu className="bg-gradient-to-br from-black to-zinc-700 mt-10">
         {menuItems.map((menu, index) => (
           <NavbarMenuItem
             key={`${menu.title}-${index}`}
