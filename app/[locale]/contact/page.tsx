@@ -1,13 +1,7 @@
-import {useTranslations} from 'next-intl';
+import Contact from "./contact";
 
- const ContactPage = () => {
-  const t = useTranslations();
-  return (
-    <div>
-      {/* <h1 className='text-xl'>{t("Home.title")}</h1> */}
-      Contact
-    </div>
-  );
-}
+const ContactPage = () => {
+  return <Contact />;
+};
 
 export default ContactPage;

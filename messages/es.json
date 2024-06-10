@@ -48,5 +48,18 @@
     "moviesDB": "Investiga los últimos estrenos, las películas más populares y descubre su sinopsis. Aplicación desarrollada con React Native donde utilizo una API de terceros para obtener la información.",
     "calculator": "Proyecto llevado a cabo con React Native donde busco imitar la calculadora de iOS. Posee las principales funciones de suma, resta, división, multiplicación.",
     "rogerRestaurant": "Sitio web de reservas en restaurantes desarrollado con Next.Js. El dueño del restaurante podrá obtener todos los datos de las mismas para realizar un seguimiento minucioso."
+  },
+  "Contact": {
+    "title1": "Nos ponemos en ",
+    "title2": "contacto",
+    "description": "Comunícate a través de una simple llamada o completando el formulario. Hazme saber tu propuesta y me comunicaré lo más rápido posible!",
+    "name": "Nombre",
+    "placeholderName": "Escribe tu nombre",
+    "email": "Correo electrónico",
+    "placeholderEmail": "Escribe tu correo",
+    "phone": "Teléfono",
+    "placeholderPhone": "Escribe tu teléfono",
+    "message": "Mensaje",
+    "placeholderMessage": "Hazme saber tus propuestas"
   }
 }
