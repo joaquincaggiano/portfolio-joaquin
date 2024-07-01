@@ -12,12 +12,12 @@ const Contact = () => {
   const t = useTranslations();
   const router = useRouter();
 
-  const [state, formAction] = useFormState(sendEmailToMe, initialState);
+  // const [state, formAction] = useFormState(sendEmailToMe, initialState);
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-center items-center">
       {/* Bloque contacto */}
-      <div className="flex flex-col gap-5 w-full max-w-[400px]">
+      <div className="flex flex-col items-center gap-5 w-full">
         <h1 className="text-4xl ">
           {t("Contact.title1")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff58cd] to-[#00a8ef]">
@@ -74,12 +74,10 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Formulario */}
-      <form
+      {/* <form
         action={formAction}
         className="w-full max-w-[550px] flex flex-col gap-5"
       >
-        {/* Name */}
         <div>
           <h3>{t("Contact.name")}</h3>
           <Input
@@ -98,7 +96,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Email */}
         <div>
           <h3>{t("Contact.email")}</h3>
           <Input
@@ -117,7 +114,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Phone */}
         <div>
           <h3>{t("Contact.phone")}</h3>
           <Input
@@ -136,7 +132,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Message */}
         <div>
           <h3>{t("Contact.message")}</h3>
           <Input
@@ -156,7 +151,7 @@ const Contact = () => {
         </div>
 
         <Button type="submit">Enviar</Button>
-      </form>
+      </form> */}
     </div>
   );
 };
