@@ -1,12 +1,15 @@
 "use client";
-import { Button, Input } from "@nextui-org/react";
+// import { Button, Input } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useFormState } from "react-dom";
-import { InitialStateContact, sendEmailToMe } from "./action-contact";
+// import { useFormState } from "react-dom";
+// import { InitialStateContact, sendEmailToMe } from "./action-contact";
+import GmailLogo from "@/public/icons/gmail.svg";
+import LinkedinLogo from "@/public/icons/linkedin.svg";
+import PhoneLogo from "@/public/icons//wpp.svg";
 
-const initialState: InitialStateContact = { message: null, errors: {} };
+// const initialState: InitialStateContact = { message: null, errors: {} };
 
 const Contact = () => {
   const t = useTranslations();
@@ -22,52 +25,52 @@ const Contact = () => {
           {t("Contact.title1")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff58cd] to-[#00a8ef]">
             {t("Contact.title2")}
-          </span>
+          </span>{" "}
           ?
         </h1>
 
-        <p className="text-xl mb-10">{t("Contact.description")}</p>
+        <div className="text-xl text-center mb-10 w-full max-w-[700px]">
+          {t("Contact.description")}
+        </div>
 
-        <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2">
-            <Image
-              src={require("@/public/icons/email.svg")}
-              width={24}
-              height={24}
-              alt="email"
-            />
-
-            <span className="hover:underline hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff58cd] to-[#00a8ef]">
-              <a href="mailto:joaquincaggiano@gmail.com">
-                joaquincaggiano@gmail.com
-              </a>
+        {/* Cards */}
+        <div className="w-full flex justify-center items-center gap-20">
+          <div className="flex flex-col items-center gap-3 w-full max-w-[200px]">
+            <a
+              href="mailto:joaquincaggiano@gmail.com"
+              className="flex justify-center items-center w-full max-w-[200px] rounded-[10px] p-5 border-2 border-[#DB4437] hover:bg-gradient-to-r from-[#DB4437] to-white cursor-pointer"
+            >
+              <Image src={GmailLogo} width={45} height={45} alt="gmail" />
+            </a>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#DB4437]">
+              joaquincaggiano@gmail.com
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
-            <Image
-              src={require("@/public/icons/phone.svg")}
-              width={24}
-              height={24}
-              alt="email"
-            />
+          <div className="flex flex-col items-center gap-3 w-full max-w-[200px]">
+            <div
+            onClick={() => router.push("https://wa.me/+5493416957516")}
+              className="flex justify-center items-center w-full max-w-[200px] rounded-[10px] p-5 border-2 border-[#25D366] hover:bg-gradient-to-r from-[#16813a] to-[#25D366] cursor-pointer"
+            >
+              <Image src={PhoneLogo} width={45} height={45} alt="phone" />
+            </div>
 
-            <span>+34 624-750-408</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] to-[#16813a]">
+              +34 624-750-408
+            </span>
           </div>
-          <div className="flex items-center gap-2">
-            <Image
-              src={require("@/public/icons/linkedin.svg")}
-              width={24}
-              height={24}
-              alt="email"
-            />
 
-            <span
+          <div className="flex flex-col items-center gap-3 w-full max-w-[200px]">
+            <div
               onClick={() =>
                 router.push("https://www.linkedin.com/in/joaquin-caggiano-dev/")
               }
-              className="hover:underline hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#ff58cd] to-[#00a8ef] cursor-pointer"
+              className="flex justify-center items-center w-full max-w-[200px] rounded-[10px] p-5 border-2 border-[#0E76A8] hover:bg-gradient-to-r from-[#0E76A8] to-[#00D4FF] cursor-pointer"
             >
+              <Image src={LinkedinLogo} width={45} height={45} alt="linkedin" />
+            </div>
+
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#0E76A8]">
               joaquin-caggiano-dev
             </span>
           </div>

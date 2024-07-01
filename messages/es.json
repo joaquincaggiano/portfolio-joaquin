@@ -50,9 +50,9 @@
     "rogerRestaurant": "Sitio web de reservas en restaurantes desarrollado con Next.Js. El dueño del restaurante podrá obtener todos los datos de las mismas para realizar un seguimiento minucioso."
   },
   "Contact": {
-    "title1": "Nos ponemos en ",
+    "title1": "¿ Nos ponemos en ",
     "title2": "contacto",
-    "description": "Comunícate a través de una simple llamada o completando el formulario. Hazme saber tu propuesta y me comunicaré lo más rápido posible!",
+    "description": "Comunícate a través de una simple llamada o enviando un correo. Hazme saber tu propuesta y me comunicaré lo más rápido posible!",
     "name": "Nombre",
     "placeholderName": "Escribe tu nombre",
     "email": "Correo electrónico",
