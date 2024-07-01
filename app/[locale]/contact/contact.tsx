@@ -1,18 +1,18 @@
 "use client";
-import { Input } from "@nextui-org/react";
+import { Button, Input } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useFormState } from "react-dom";
+import { InitialStateContact, sendEmailToMe } from "./action-contact";
+
+const initialState: InitialStateContact = { message: null, errors: {} };
 
 const Contact = () => {
   const t = useTranslations();
   const router = useRouter();
 
-  const [name, setName] = useState<string>();
-  const [email, setEmail] = useState<string>();
-  const [phone, setPhone] = useState<string>();
-  const [message, setMessage] = useState<string>();
+  const [state, formAction] = useFormState(sendEmailToMe, initialState);
 
   return (
     <div className="flex justify-between">
@@ -75,54 +75,87 @@ const Contact = () => {
       </div>
 
       {/* Formulario */}
-      <form className="w-full max-w-[550px] flex flex-col gap-5">
+      <form
+        action={formAction}
+        className="w-full max-w-[550px] flex flex-col gap-5"
+      >
         {/* Name */}
         <div>
           <h3>{t("Contact.name")}</h3>
           <Input
+            name="name"
             type="text"
             placeholder={t("Contact.placeholderName")}
-            value={name}
-            onValueChange={setName}
+            aria-describedby="name-error"
           />
-          {/* <span className="text-danger">Error</span> */}
+          <div id="name-error" aria-live="polite" aria-atomic="true">
+            {state?.errors?.name &&
+              state.errors.name.map((error: string) => (
+                <p className="mt-2 text-sm text-danger" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
         </div>
 
         {/* Email */}
         <div>
           <h3>{t("Contact.email")}</h3>
           <Input
+            name="email"
             type="email"
             placeholder={t("Contact.placeholderEmail")}
-            value={email}
-            onValueChange={setEmail}
+            aria-describedby="email-error"
           />
-          {/* <span className="text-danger">Error</span> */}
+          <div id="email-error" aria-live="polite" aria-atomic="true">
+            {state?.errors?.email &&
+              state.errors.email.map((error: string) => (
+                <p className="mt-2 text-sm text-danger" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
         </div>
 
         {/* Phone */}
         <div>
           <h3>{t("Contact.phone")}</h3>
           <Input
+            name="phone"
             type="text"
             placeholder={t("Contact.placeholderPhone")}
-            value={phone}
-            onValueChange={setPhone}
+            aria-describedby="phone-error"
           />
-          {/* <span className="text-danger">Error</span> */}
+          <div id="phone-error" aria-live="polite" aria-atomic="true">
+            {state?.errors?.phone &&
+              state.errors.phone.map((error: string) => (
+                <p className="mt-2 text-sm text-danger" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
         </div>
 
         {/* Message */}
         <div>
           <h3>{t("Contact.message")}</h3>
           <Input
+            name="message"
             type="text"
             placeholder={t("Contact.placeholderMessage")}
-            value={message}
-            onValueChange={setMessage}
+            aria-describedby="message-error"
           />
-          {/* <span className="text-danger">Error</span> */}
+          <div id="message-error" aria-live="polite" aria-atomic="true">
+            {state?.errors?.message &&
+              state.errors.message.map((error: string) => (
+                <p className="mt-2 text-sm text-danger" key={error}>
+                  {error}
+                </p>
+              ))}
+          </div>
         </div>
+
+        <Button type="submit">Enviar</Button>
       </form>
     </div>
   );
