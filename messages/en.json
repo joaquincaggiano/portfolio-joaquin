@@ -60,6 +60,9 @@
     "phone": "Phone",
     "placeholderPhone": "Write your phone",
     "message": "Message",
-    "placeholderMessage": "Let me know your proposals"
+    "placeholderMessage": "Let me know your proposals",
+    "sendEmail": "Send email",
+    "sendMessage": "Send message",
+    "visitProfile": "Visit profile"
   }
 }

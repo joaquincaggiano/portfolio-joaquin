@@ -22,7 +22,7 @@ const Contact = () => {
     <div className="flex justify-center items-center">
       {/* Bloque contacto */}
       <div className="flex flex-col items-center gap-5 w-full">
-        <h1 className="text-4xl ">
+        <h1 className="text-4xl text-center">
           {t("Contact.title1")}{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff58cd] to-[#00a8ef]">
             {t("Contact.title2")}
@@ -35,7 +35,7 @@ const Contact = () => {
         </div>
 
         {/* Cards */}
-        <div className="w-full flex justify-center items-center gap-20">
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-5 md:gap-20">
           {/* GMAIL */}
           <ContactCard
             icon={<Image src={GmailLogo} width={60} height={60} alt="gmail" />}
@@ -50,7 +50,7 @@ const Contact = () => {
                 href="mailto:joaquincaggiano@gmail.com"
                 className=" font-semibold text-xl hover:text-[#DB4437]"
               >
-                Enviar email
+                {t("Contact.sendEmail")}
               </a>
             </div>
           </ContactCard>
@@ -74,7 +74,7 @@ const Contact = () => {
                 target="_blank"
                 className="font-semibold text-xl hover:text-[#25D366] cursor-pointer"
               >
-                Enviar mensaje
+                {t("Contact.sendMessage")}
               </a>
             </div>
           </ContactCard>
@@ -96,7 +96,7 @@ const Contact = () => {
                 target="_blank"
                 className=" font-semibold text-xl hover:text-[#00D4FF]"
               >
-                Visitar perfil
+                {t("Contact.visitProfile")}
               </a>
             </div>
           </ContactCard>
