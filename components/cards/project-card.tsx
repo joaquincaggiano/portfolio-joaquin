@@ -32,7 +32,7 @@ const ProjectCard = ({ project }: Props) => {
 
   return (
     <div
-      className={`${styles.card} relative w-full max-w-[250px] h-[300px] sm:max-w-[240px] sm:h-[320px] md:max-w-[270px] md:h-[360px] xl:max-w-[300px] xl:h-[380px]`}
+      className={`${styles.card} relative w-[300px] h-[380px]`}
     >
       <div
         className={styles.front}
