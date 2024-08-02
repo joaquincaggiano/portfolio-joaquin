@@ -24,37 +24,37 @@ const Home = () => {
     {
       name: "Javascript",
       icon: JSLogo,
-      description: t("Skills.js")
+      description: t("Skills.js"),
     },
     {
       name: "Next.js",
       icon: NextLogo,
-      description: t("Skills.next")
+      description: t("Skills.next"),
     },
     {
       name: "React / Native",
       icon: ReactLogo,
-      description: t("Skills.react")
+      description: t("Skills.react"),
     },
     {
       name: "Firebase",
       icon: FirebaseLogo,
-      description: t("Skills.firebase")
+      description: t("Skills.firebase"),
     },
     {
       name: "Typescript",
       icon: TSLogo,
-      description: t("Skills.ts")
+      description: t("Skills.ts"),
     },
     {
       name: "Node.js",
       icon: NodeLogo,
-      description: t("Skills.node")
+      description: t("Skills.node"),
     },
     {
       name: "Prisma",
       icon: PrismaLogo,
-      description: t("Skills.prisma")
+      description: t("Skills.prisma"),
     },
     {
       name: "Postgres",
@@ -88,10 +88,11 @@ const Home = () => {
           </div>
 
           {/* Boton ver CV */}
-          <Button
-            variant="bordered"
-            className="w-full max-w-[120px] mt-5 border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light hover:border-0 font-medium"
-            onClick={openPDF}
+          <a
+            href="/pdf/j-caggiano-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 w-fit text-center py-3 px-4 mt-5 border-2 border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light rounded-xl hover:border-black"
           >
             {t("Home.viewCV")}
 
@@ -102,7 +103,7 @@ const Home = () => {
               className="mb-[1.5px] ml-1"
               alt="eye logo"
             />
-          </Button>
+          </a>
         </div>
 
         {/* Datos personales - VSC */}
@@ -110,12 +111,19 @@ const Home = () => {
       </div>
 
       {/* Skills */}
-      <h2 className="text-center text-2xl md:text-3xl mb-7">{t("Skills.title")}</h2>
+      <h2 className="text-center text-2xl md:text-3xl mb-7">
+        {t("Skills.title")}
+      </h2>
 
       <div className="columns-2 mb-10 sm:w-full sm:max-w-[500px] sm:self-center sm:flex sm:flex-wrap sm:justify-between sm:items-center sm:gap-5">
         {skills.map((skill) => {
           return (
-            <CardSkill key={skill.name} name={skill.name} icon={skill.icon} description={skill.description} />
+            <CardSkill
+              key={skill.name}
+              name={skill.name}
+              icon={skill.icon}
+              description={skill.description}
+            />
           );
         })}
       </div>
