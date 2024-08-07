@@ -26,7 +26,7 @@ const CardDataExperience = ({
         {/* Imagen, titulo y descripción */}
         <div className="w-full lg:w-[60%] flex gap-5">
           {/* Imagen */}
-          {image}
+          <div className="rounded-lg overflow-hidden">{image}</div>
 
           {/* Título y descripción */}
           <div className="w-full max-w-[400px] flex flex-col gap-5">
