@@ -1,5 +1,8 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import ProjectCard from "@/components/cards/project-card";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const ProjectsPage = () => {
   const t = useTranslations();
@@ -7,18 +10,10 @@ const ProjectsPage = () => {
   const projects = [
     {
       image: "/img/biteplanner.png",
-      title: "Bite plan: Menu semanal",
+      title: "Bite plan",
       description: t("Projects.bitePlanner"),
       amITheOwner: false,
-      link: "",
-      buttonTitle: t("common.download"),
-    },
-    {
-      image: "/img/stopXenofobia.png",
-      title: "Stop Xenofobia",
-      description: t("Projects.stopXenofobia"),
-      amITheOwner: false,
-      link: "",
+      link: "https://apps.apple.com/ar/app/bite-plan-men%C3%BA-semanal/id6478165544",
       buttonTitle: t("common.download"),
     },
     {
@@ -38,29 +33,61 @@ const ProjectsPage = () => {
       buttonTitle: "Video",
     },
     {
-      image: "/img/calculadora.jpeg",
-      title: "Calculadora",
-      description: t("Projects.calculator"),
-      amITheOwner: true,
-      link: "https://vimeo.com/832443587/5a0b559911",
-      buttonTitle: "Video",
+      image: "/icons/3dcube.png",
+      title: "Work Hub",
+      description: t("Projects.workhub"),
+      amITheOwner: false,
+      link: "https://play.google.com/store/apps/details?id=es.desaway.managerooms&hl=es",
+      buttonTitle: "Descarga",
     },
     // {
-    //   image: "/img/restaurante.jpeg",
-    //   title: "Roger Restaurantes",
-    //   description: t("Projects.rogerRestaurant"),
-    //   amITheOwner: false,
-    //   link: "",
+    //   image: "/img/calculadora.jpeg",
+    //   title: "Calculadora",
+    //   description: t("Projects.calculator"),
+    //   amITheOwner: true,
+    //   link: "https://vimeo.com/832443587/5a0b559911",
     //   buttonTitle: "Video",
     // },
   ];
 
+  const privateProjects = [
+    {
+      title: t("Projects.labelPlatformTitle"),
+      description: t("Projects.labelPlatformDescription"),
+    },
+    {
+      title: t("Projects.stopXenofobiaTitle"),
+      description: t("Projects.stopXenofobiaDescription"),
+    },
+  ];
+
   return (
-    <div className="m-auto">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="flex flex-col justify-center items-center gap-20">
+      <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8">
         {projects.map((project) => {
           return <ProjectCard key={project.title} project={project} />;
         })}
+      </div>
+
+      <div className="flex flex-col gap-10">
+        <h2 className="text-base font-normal">* {t("Projects.subtitle")}</h2>
+
+        <Accordion>
+          {privateProjects.map((project) => {
+            return (
+              <AccordionItem
+                key={project.title}
+                aria-label={project.title}
+                title={project.title}
+                className="font-semibold text-xl"
+              >
+                <div className="flex flex-col text-base font-normal mb-5">
+                  {project.description}
+                </div>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
       </div>
     </div>
   );
