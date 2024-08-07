@@ -1,10 +1,9 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Vsc from "@/components/home/vsc";
 import CardSkill from "@/components/cards/card-skill";
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
 import { pallete } from "@/styles/pallete";
 
 import EyeLogo from "@/public/icons/eye.svg";
@@ -62,15 +61,10 @@ const Home = () => {
       description: t("Skills.postgres"),
     },
   ];
-  // const localActive = useLocale();
-
-  const openPDF = () => {
-    console.log("mostrar pdf");
-  };
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-16">
+      <div className="flex flex-col lg:flex-row gap-16 mb-20">
         {/* Presentación */}
         <div className="flex flex-col w-full lg:max-w-[50%]">
           {/* Saludo */}
@@ -115,17 +109,19 @@ const Home = () => {
         {t("Skills.title")}
       </h2>
 
-      <div className="columns-2 mb-10 sm:w-full sm:max-w-[500px] sm:self-center sm:flex sm:flex-wrap sm:justify-between sm:items-center sm:gap-5">
-        {skills.map((skill) => {
-          return (
-            <CardSkill
-              key={skill.name}
-              name={skill.name}
-              icon={skill.icon}
-              description={skill.description}
-            />
-          );
-        })}
+      <div className="flex justify-center items-center">
+        <div className="w-full lg:max-w-[70%] grid grid-cols-2 sm:grid-cols-4 gap-5">
+          {skills.map((skill) => {
+            return (
+              <CardSkill
+                key={skill.name}
+                name={skill.name}
+                icon={skill.icon}
+                description={skill.description}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

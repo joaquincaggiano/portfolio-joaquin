@@ -26,20 +26,20 @@ const CardSkill = ({ name, icon, description }: Props) => {
   return (
     <>
       <div
-        className="flex flex-col justify-between items-center p-2 mb-3 cursor-pointer"
+        className="flex flex-col justify-between items-center p-2 mb-3 cursor-pointer transform hover:scale-125 transition duration-300"
         onClick={() => setOpenModal(true)}
       >
-        <Image
-          src={icon}
-          width={80}
-          height={80}
-          alt={name}
-          className="transform hover:scale-125 transition duration-300"
-        />
+        <Image src={icon} width={80} height={80} alt={name} />
+
         <h4 className="mt-3 text-base">{name}</h4>
       </div>
 
-      <Modal isOpen={openModal} onOpenChange={setOpenModal} backdrop="blur" placement="top-center">
+      <Modal
+        isOpen={openModal}
+        onOpenChange={setOpenModal}
+        backdrop="blur"
+        placement="top-center"
+      >
         <ModalContent>
           {(onClose) => (
             <>
