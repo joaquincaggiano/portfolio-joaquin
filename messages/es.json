@@ -62,7 +62,13 @@
   "Experience": {
     "coursesTaken": "Cursos realizados",
     "projectsDone": "Projectos hechos",
-    "monthsOfExperience": "Meses de experiencia"
+    "monthsOfExperience": "Meses de experiencia",
+    "coderDate": "Abril 2023 - Septiembre 2023",
+    "coderDescription": "Empresa dedicada a brindar cursos digitales certificados.",
+    "coderRole": "Tutor de alumnos",
+    "desawayDate": "Octubre 2023 - Actualidad",
+    "desawayDescription": "Empresa enfocada en el desarrollo de páginas web, aplicaciones móviles, software y diseño a medida.",
+    "desawayRole": "Desarrollador frontend junior"
   },
   "Contact": {
     "title1": "¿ Nos ponemos en ",

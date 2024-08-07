@@ -7,7 +7,7 @@ interface Props {
   data: string;
 }
 
-const CardExperiencie = ({ data, title }: Props) => {
+const CardAnalyticExperiencie = ({ data, title }: Props) => {
   return (
     <Card className="w-[250px] border-gray-700 border-1">
       <CardBody>
@@ -20,4 +20,4 @@ const CardExperiencie = ({ data, title }: Props) => {
   );
 };
 
-export default CardExperiencie;
+export default CardAnalyticExperiencie;

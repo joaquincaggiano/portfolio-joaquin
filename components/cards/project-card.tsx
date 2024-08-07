@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./project-card.module.css";
-import AppButton from "../buttons/AppButton";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
@@ -22,13 +21,6 @@ const ProjectCard = ({ project }: Props) => {
   const t = useTranslations();
 
   const linkRef = useRef<HTMLAnchorElement>(null);
-
-  const redirectToExternalPage = () => {
-    // Simular clic en el enlace al hacer clic en el botón
-    if (linkRef.current) {
-      linkRef.current.click();
-    }
-  };
 
   return (
     <div className={`${styles.card} relative w-[300px] h-[380px]`}>

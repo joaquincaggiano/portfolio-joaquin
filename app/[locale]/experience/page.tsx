@@ -1,14 +1,58 @@
-import CardExperiencie from "@/components/cards/card-experiencie";
+import CardAnalyticExperiencie from "@/components/cards/card-analytic-experiencie";
+import CardDataExperience from "@/components/cards/card-data-experience";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import CoderLogo from "@public/img/coder.jpeg";
 
 const ExperiencePage = () => {
   const t = useTranslations();
+
+  const experience = [
+    {
+      date: t("Experience.coderDate"),
+      image: <Image src={CoderLogo} width={120} height={80} alt="coderhouse" />,
+      title: "Coder House",
+      description: t("Experience.coderDescription"),
+      role: t("Experience.coderRole"),
+    },
+    {
+      date: t("Experience.desawayDate"),
+      image: <Image src={CoderLogo} width={120} height={80} alt="desaway" />,
+      title: "Desaway",
+      description: t("Experience.desawayDescription"),
+      role: t("Experience.desawayRole"),
+    },
+  ];
   return (
     <div>
-      <div className="flex flex-col gap-10 sm:flex-row justify-center items-center">
-        <CardExperiencie data="5" title={t("Experience.coursesTaken")} />
-        <CardExperiencie data="+12" title={t("Experience.projectsDone")} />
-        <CardExperiencie data="18" title={t("Experience.monthsOfExperience")} />
+      <div className="flex flex-col gap-10 sm:flex-row justify-center items-center mb-20">
+        <CardAnalyticExperiencie
+          data="5"
+          title={t("Experience.coursesTaken")}
+        />
+        <CardAnalyticExperiencie
+          data="+12"
+          title={t("Experience.projectsDone")}
+        />
+        <CardAnalyticExperiencie
+          data="18"
+          title={t("Experience.monthsOfExperience")}
+        />
+      </div>
+
+      <div className="flex flex-col justify-center items-center gap-10">
+        {experience.map((experience) => {
+          return (
+            <CardDataExperience
+              key={experience.title}
+              date={experience.date}
+              image={experience.image}
+              title={experience.title}
+              description={experience.description}
+              role={experience.role}
+            />
+          );
+        })}
       </div>
     </div>
   );
