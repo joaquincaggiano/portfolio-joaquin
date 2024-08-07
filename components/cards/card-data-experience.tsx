@@ -19,12 +19,12 @@ const CardDataExperience = ({
 }: Props) => {
   return (
     <div className="w-full">
-      <div className="w-full flex justify-between mb-5">
+      <div className="w-full flex flex-col gap-5 lg:flex-row lg:gap-0 lg:justify-between mb-5">
         {/* Fecha */}
-        <div className="w-[20%] text-gray-500 font-normal text-sm">{date}</div>
+        <div className="w-full lg:w-[20%] text-gray-500 font-normal text-sm">{date}</div>
 
         {/* Imagen, titulo y descripción */}
-        <div className="w-[60%] flex gap-5">
+        <div className="w-full lg:w-[60%] flex gap-5">
           {/* Imagen */}
           {image}
 
@@ -37,7 +37,7 @@ const CardDataExperience = ({
         </div>
 
         {/* Rol */}
-        <div className="w-[20%] font-normal text-base">{role}</div>
+        <div className="w-full lg:w-[20%] font-normal text-base">{role}</div>
       </div>
 
       <Divider />
