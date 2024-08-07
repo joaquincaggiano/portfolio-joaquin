@@ -66,7 +66,7 @@ const Home = () => {
     <>
       <div className="flex flex-col lg:flex-row gap-16 mb-20">
         {/* Presentación */}
-        <div className="flex flex-col w-full lg:max-w-[50%]">
+        <div className="flex flex-col w-full lg:max-w-[50%] animate-slide-in-left">
           {/* Saludo */}
           <div className="w-full max-w-[300px] self-center md:max-w-[400px] lg:max-w-[100%]">
             <h1 className="text-2xl md:text-3xl xl:text-4xl mb-5 text-center lg:text-start">
