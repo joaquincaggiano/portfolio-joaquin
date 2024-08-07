@@ -25,7 +25,7 @@ const Contact = () => {
         </div>
 
         {/* Cards */}
-        <div className="w-full flex justify-center items-center gap-10">
+        <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-10">
           {/* GMAIL */}
           <a
             href="mailto:joaquincaggiano@gmail.com"
