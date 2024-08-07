@@ -59,6 +59,18 @@ const ProjectsPage = () => {
       title: t("Projects.stopXenofobiaTitle"),
       description: t("Projects.stopXenofobiaDescription"),
     },
+    {
+      title: t("Projects.ujiPrideTitle"),
+      description: t("Projects.ujiPrideDescription"),
+    },
+    {
+      title: t("Projects.rogerRestaurantTitle"),
+      description: t("Projects.rogerRestaurantDescription"),
+    },
+    {
+      title: t("Projects.rekTitle"),
+      description: t("Projects.rekDescription"),
+    },
   ];
 
   return (
