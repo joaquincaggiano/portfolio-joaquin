@@ -10,6 +10,7 @@ const ExperiencePage = () => {
   const experience = [
     {
       date: t("Experience.coderDate"),
+      url: "https://www.coderhouse.com/es/",
       image: <Image src={CoderLogo} width={120} height={80} alt="coderhouse" />,
       title: "Coder House",
       description: t("Experience.coderDescription"),
@@ -17,6 +18,7 @@ const ExperiencePage = () => {
     },
     {
       date: t("Experience.desawayDate"),
+      url: "https://desaway.es/",
       image: <Image src={CoderLogo} width={120} height={80} alt="desaway" />,
       title: "Desaway",
       description: t("Experience.desawayDescription"),
@@ -46,6 +48,7 @@ const ExperiencePage = () => {
             <CardDataExperience
               key={experience.title}
               date={experience.date}
+              url={experience.url}
               image={experience.image}
               title={experience.title}
               description={experience.description}

@@ -1,9 +1,11 @@
 "use client";
+
 import { Divider } from "@nextui-org/react";
 import { ReactNode } from "react";
 
 interface Props {
   date: string;
+  url: string;
   image: ReactNode;
   title: string;
   description: string;
@@ -12,6 +14,7 @@ interface Props {
 
 const CardDataExperience = ({
   date,
+  url,
   image,
   title,
   description,
@@ -21,12 +24,20 @@ const CardDataExperience = ({
     <div className="w-full">
       <div className="w-full flex flex-col gap-5 lg:flex-row lg:gap-0 lg:justify-between mb-5">
         {/* Fecha */}
-        <div className="w-full lg:w-[20%] text-gray-500 font-normal text-sm">{date}</div>
+        <div className="w-full lg:w-[20%] text-gray-500 font-normal text-sm">
+          {date}
+        </div>
 
         {/* Imagen, titulo y descripción */}
         <div className="w-full lg:w-[60%] flex gap-5">
           {/* Imagen */}
-          <div className="rounded-lg overflow-hidden">{image}</div>
+          <a
+            href={url}
+            target="_blank"
+            className="rounded-lg overflow-hidden"
+          >
+            {image}
+          </a>
 
           {/* Título y descripción */}
           <div className="w-full max-w-[400px] flex flex-col gap-5">
