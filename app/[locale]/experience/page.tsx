@@ -3,6 +3,7 @@ import CardDataExperience from "@/components/cards/card-data-experience";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import CoderLogo from "@public/img/coder.jpeg";
+import DesawayLogo from "@public/icons/iso_des.svg"
 
 const ExperiencePage = () => {
   const t = useTranslations();
@@ -19,7 +20,7 @@ const ExperiencePage = () => {
     {
       date: t("Experience.desawayDate"),
       url: "https://desaway.es/",
-      image: <Image src={CoderLogo} width={120} height={80} alt="desaway" />,
+      image: <Image src={DesawayLogo} width={120} height={80} alt="desaway" />,
       title: "Desaway",
       description: t("Experience.desawayDescription"),
       role: t("Experience.desawayRole"),
