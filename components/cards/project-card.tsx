@@ -49,7 +49,7 @@ const ProjectCard = ({ project }: Props) => {
           </span>
 
           <a
-            className={`w-fit text-center py-2 px-6 border-2 border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light rounded-xl hover:border-black`}
+            className={`w-fit text-center py-2 px-5 border-2 border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light rounded-xl hover:border-black`}
             ref={linkRef}
             href={link}
             target="_blank"

@@ -38,7 +38,7 @@ const ProjectsPage = () => {
       description: t("Projects.workhub"),
       amITheOwner: false,
       link: "https://play.google.com/store/apps/details?id=es.desaway.managerooms&hl=es",
-      buttonTitle: "Descarga",
+      buttonTitle: t("common.download"),
     },
     // {
     //   image: "/img/calculadora.jpeg",
