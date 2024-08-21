@@ -19,35 +19,35 @@ const InfoCode = () => {
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>{t("name")}:</span>{" "}
-      <span className="text-orange-400">'Joaquin'</span>,
+      <span className="text-orange-400">&#39;Joaquin&#39;</span>,
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>{t("lastName")}:</span>{" "}
-      <span className="text-orange-400">'S. Caggiano'</span>,
+      <span className="text-orange-400">&#39;S. Caggiano&#39;</span>,
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>{t("age")}:</span>{" "}
-      <span className="text-orange-400">'25'</span>,
+      <span className="text-orange-400">&#39;25&#39;</span>,
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>{t("languages")}:</span>{" "}
       <span style={{ color: pallete.violet }}>{"["} </span>
-      <span className="text-orange-400">'{t("spanish")}'</span>,
-      <span className="text-orange-400"> '{t("english")}'</span>
+      <span className="text-orange-400">&#39;{t("spanish")}&#39;</span>,
+      <span className="text-orange-400"> &#39;{t("english")}&#39;</span>
       <span style={{ color: pallete.violet }}> {"]"}</span>,<br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>
         {t("currentCountry")}:
       </span>{" "}
-      <span className="text-orange-400">'{t("spain")}'</span>,
+      <span className="text-orange-400">&#39;{t("spain")}&#39;</span>,
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>
         {t("nationality")}:
       </span>{" "}
       <span style={{ color: pallete.violet }}>{"["} </span>
-      <span className="text-orange-400">'{t("argentina")}'</span>,
-      <span className="text-orange-400"> '{t("italian")}'</span>
+      <span className="text-orange-400">&#39;{t("argentina")}&#39;</span>,
+      <span className="text-orange-400"> &#39;{t("italian")}&#39;</span>
       <span style={{ color: pallete.violet }}> {"]"}</span>
       <br />
       {"\u00A0\u00A0\u00A0\u00A0"}
