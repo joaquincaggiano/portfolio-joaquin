@@ -19,7 +19,7 @@ const LocaleSwitcher = () => {
   const localActive = useLocale();
   const pathname = usePathname();
 
-  const onSelectChange = (nextLocale: string) => {
+  const onSelectChange = (nextLocale: "es" | "en" | undefined) => {
     // const nextLocale = e.target.value;
     // console.log("nextLocale: ", nextLocale);
     startTransition(() => {
