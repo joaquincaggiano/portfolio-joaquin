@@ -9,7 +9,7 @@ const Contact = () => {
   const t = useTranslations();
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mt-40">
       {/* Bloque contacto */}
       <div className="flex flex-col items-center gap-5 w-full">
         <h1 className="text-4xl text-center">
