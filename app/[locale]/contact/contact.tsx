@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import GmailLogo from "@/public/icons/gmail.svg";
 import LinkedinLogo from "@/public/icons/linkedin.svg";
-import PhoneLogo from "@/public/icons//wpp.svg";
+// import PhoneLogo from "@/public/icons//wpp.svg";
 
 const Contact = () => {
   const t = useTranslations();
