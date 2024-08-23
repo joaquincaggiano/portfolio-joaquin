@@ -3,20 +3,12 @@ import CardDataExperience from "@/components/cards/card-data-experience";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import CoderLogo from "@public/img/coder.jpeg";
-import DesawayLogo from "@public/icons/iso_des.svg"
+import DesawayLogo from "@public/icons/iso_des.svg";
 
 const ExperiencePage = () => {
   const t = useTranslations();
 
   const experience = [
-    {
-      date: t("Experience.coderDate"),
-      url: "https://www.coderhouse.com/es/",
-      image: <Image src={CoderLogo} width={120} height={80} alt="coderhouse" />,
-      title: "Coder House",
-      description: t("Experience.coderDescription"),
-      role: t("Experience.coderRole"),
-    },
     {
       date: t("Experience.desawayDate"),
       url: "https://desaway.es/",
@@ -24,6 +16,14 @@ const ExperiencePage = () => {
       title: "desaway S.L",
       description: t("Experience.desawayDescription"),
       role: t("Experience.desawayRole"),
+    },
+    {
+      date: t("Experience.coderDate"),
+      url: "https://www.coderhouse.com/es/",
+      image: <Image src={CoderLogo} width={120} height={80} alt="coderhouse" />,
+      title: "Coder House",
+      description: t("Experience.coderDescription"),
+      role: t("Experience.coderRole"),
     },
   ];
   return (
