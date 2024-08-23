@@ -38,7 +38,7 @@ const Contact = () => {
           </a>
 
           {/* WPP */}
-          <a
+          {/* <a
             href="https://wa.me/+5493416957516"
             target="_blank"
             className="w-full max-w-[200px] flex flex-col justify-center items-center gap-2.5 text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] to-white hover:text-[#25D366]"
@@ -47,7 +47,7 @@ const Contact = () => {
             <span className="font-semibold text-base">
               {t("Contact.sendMessage")}
             </span>
-          </a>
+          </a> */}
 
           {/* LINKEDIN */}
           <a
