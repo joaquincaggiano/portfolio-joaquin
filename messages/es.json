@@ -3,7 +3,7 @@
     "close": "Cerrar",
     "download": "Descarga",
     "website": "Sitio web",
-    "desaway": "Propiedad de Desaway"
+    "desaway": "Propiedad de desaway S.L"
   },
   "Header": {
     "home": "Inicio",
@@ -42,7 +42,7 @@
   },
   "Projects": {
     "title": "Proyectos",
-    "subtitle": "Los proyectos mostrados a continuación fueron desarrollados en colaboración con la empresa Desaway y están sujetos a derechos de privacidad y confidencialidad. Por esta razón, no puedo proporcionar información detallada ni imágenes adicionales. Agradezco su comprensión.",
+    "subtitle": "Los proyectos mostrados a continuación fueron desarrollados en colaboración con la empresa desaway S.L y están sujetos a derechos de privacidad y confidencialidad. Por esta razón, no puedo proporcionar información detallada ni imágenes adicionales. Agradezco su comprensión.",
     "bitePlanner": "Planificador y organizador de comidas desarrollado con React Native y MobX. Crea planes de comida personalizados para cada día de la semana, asegurando una alimentación balanceada y variada.",
     "pokedex": "Descubre y analiza los primeros 150 pokemón. Aplicación desarrollada con React Native donde utilizo una API de terceros para obtener la información.",
     "moviesDB": "Investiga los últimos estrenos, las películas más populares y descubre su sinopsis. Aplicación desarrollada con React Native donde utilizo una API de terceros para obtener la información.",

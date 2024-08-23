@@ -21,7 +21,7 @@ const ExperiencePage = () => {
       date: t("Experience.desawayDate"),
       url: "https://desaway.es/",
       image: <Image src={DesawayLogo} width={120} height={80} alt="desaway" />,
-      title: "Desaway",
+      title: "desaway S.L",
       description: t("Experience.desawayDescription"),
       role: t("Experience.desawayRole"),
     },
