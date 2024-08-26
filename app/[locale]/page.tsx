@@ -71,7 +71,7 @@ const Home = () => {
           <div className="w-full max-w-[300px] self-center md:max-w-[400px] lg:max-w-[100%]">
             <h1 className="text-2xl md:text-3xl xl:text-4xl mb-5 text-center lg:text-start">
               {t("Home.welcome")}{" "}
-              <span style={{ color: pallete.blueLight }}>Joaquín</span> Frontend
+              <span style={{ color: pallete.blueLight }}>Joaquín</span>, Frontend
               Developer 👨🏼‍💻
             </h1>
           </div>

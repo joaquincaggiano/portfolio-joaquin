@@ -77,7 +77,7 @@ const ProjectsPage = () => {
     <div className="flex flex-col justify-center items-center gap-20">
 
       <div className="flex justify-center items-center">
-        <div className="w-full grid grid-cols-1 gap-20 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => {
             return <ProjectCard key={project.title} project={project} />;
           })}
