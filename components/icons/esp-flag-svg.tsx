@@ -2,8 +2,8 @@ const EspFlagSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="800"
-      height="800"
+      width="24"
+      height="24"
       fill="#fff"
       // ariaHidden="true"
       className="iconify iconify--emojione"

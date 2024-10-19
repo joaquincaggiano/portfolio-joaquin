@@ -2,8 +2,8 @@ const UsaFlagSvg = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="800"
-      height="800"
+      width="24"
+      height="24"
       fill="#fff"
       version="1.1"
       viewBox="0 0 473.677 473.677"
