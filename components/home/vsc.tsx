@@ -1,13 +1,12 @@
-import Image from "next/image";
-import React from "react";
 import InfoCode from "./info-code";
-import LupaLogo from "@/public/icons/lupa.svg";
-import ReactLogo from "@/public/icons/react.svg";
-import FilesLogo from "@/public/icons/files.svg";
-import LupavscLogo from "@/public/icons/lupa-vsc.svg";
-import SettingsLogo from "@/public/icons/settings.svg";
-import GitLogo from "@/public/icons/git.svg";
-import UserLogo from "@/public/icons/user.svg";
+
+import LupaSvg from "@/components/icons/lupa-svg";
+import ReactSvg from "@/components/icons/react-svg";
+import FilesSvg from "@/components/icons/files-svg";
+import LupaVscSvg from "@/components/icons/lupa-vsc-svg";
+import SettingSvg from "@/components/icons/settings-svg";
+import GitSvg from "@/components/icons/git-svg";
+import UserSvg from "@/components/icons/user-svg";
 
 const Vsc = () => {
   return (
@@ -27,7 +26,8 @@ const Vsc = () => {
         </div>
 
         <div className="rounded-md w-full max-w-[200px] p-2 flex items-center justify-center gap-2 text-xs lg:text-base bg-zinc-800">
-          <Image src={LupaLogo} className="w-3 h-3 md:w-4 sm:h-4" alt="Lupa" />
+          <LupaSvg />
+          {/* <Image src={LupaLogo} className="w-3 h-3 md:w-4 sm:h-4" alt="Lupa" /> */}
           portfolio-joaquin
         </div>
 
@@ -42,42 +42,22 @@ const Vsc = () => {
         >
           <div className="flex flex-col gap-4">
             <div className="mt-5">
-              <Image
-                src={FilesLogo}
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="files logo"
-              />
+              <FilesSvg />
             </div>
             <div>
-              <Image
-                src={LupavscLogo}
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="lupa vsc logo"
-              />
+              <LupaVscSvg />
             </div>
             <div>
-              <Image
-                src={GitLogo}
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="git logo"
-              />
+              <GitSvg />
             </div>
           </div>
 
           <div className="flex flex-col justify-center items-center gap-4 mb-4">
             <div>
-              <Image
-                src={UserLogo}
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="user logo"
-              />
+              <UserSvg />
             </div>
             <div>
-              <Image
-                src={SettingsLogo}
-                className="w-5 h-5 md:w-6 md:h-6"
-                alt="settings logo"
-              />
+              <SettingSvg />
             </div>
           </div>
         </div>
@@ -89,11 +69,7 @@ const Vsc = () => {
               className="flex items-center gap-2 p-2 w-full max-w-[100px] md:max-w-[120px] text-xs md:text-base lg:text-lg"
               style={{ borderRightWidth: 0.5 }}
             >
-              <Image
-                src={ReactLogo}
-                className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5"
-                alt="React logo"
-              />
+              <ReactSvg width="14" height="14" />
               page.tsx
             </div>
             <div style={{ borderBottomWidth: 0.5 }} />

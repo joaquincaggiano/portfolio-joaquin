@@ -1,63 +1,63 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Vsc from "@/components/home/vsc";
 import CardSkill from "@/components/cards/card-skill";
-import Image from "next/image";
 import { pallete } from "@/styles/pallete";
 
-import EyeLogo from "@/public/icons/eye.svg";
-import ReactLogo from "@/public/icons/react.svg";
-import FirebaseLogo from "@/public/icons/firebase.svg";
-import JSLogo from "@/public/icons/js.svg";
-import TSLogo from "@/public/icons/ts.svg";
-import PrismaLogo from "@/public/icons/prisma.svg";
-import NodeLogo from "@/public/icons/node.svg";
-import NextLogo from "@/public/icons/next.svg";
-import PostgresLogo from "@/public/icons/postgres.svg";
+import EyeSvg from "@/components/icons/eye-svg";
+import ReactSvg from "@/components/icons/react-svg";
+import FirebaseSvg from "@/components/icons/firebase-svg";
+import JsSvg from "@/components/icons/js-svg";
+import TsSvg from "@/components/icons/ts-svg";
+import PrismaSvg from "@/components/icons/prisma-svg";
+import NodeSvg from "@/components/icons/node-svg";
+import NextSvg from "@/components/icons/next-svg";
+import PostgresSvg from "@/components/icons/postgres-svg";
 
 const Home = () => {
   const t = useTranslations();
+  const localActive = useLocale();
 
   const skills = [
     {
       name: "Javascript",
-      icon: JSLogo,
+      icon: <JsSvg />,
       description: t("Skills.js"),
     },
     {
       name: "Next.js",
-      icon: NextLogo,
+      icon: <NextSvg />,
       description: t("Skills.next"),
     },
     {
       name: "React / Native",
-      icon: ReactLogo,
+      icon: <ReactSvg width="80" height="80" />,
       description: t("Skills.react"),
     },
     {
       name: "Firebase",
-      icon: FirebaseLogo,
+      icon: <FirebaseSvg />,
       description: t("Skills.firebase"),
     },
     {
       name: "Typescript",
-      icon: TSLogo,
+      icon: <TsSvg />,
       description: t("Skills.ts"),
     },
     {
       name: "Node.js",
-      icon: NodeLogo,
+      icon: <NodeSvg />,
       description: t("Skills.node"),
     },
     {
       name: "Prisma",
-      icon: PrismaLogo,
+      icon: <PrismaSvg />,
       description: t("Skills.prisma"),
     },
     {
       name: "Postgres",
-      icon: PostgresLogo,
+      icon: <PostgresSvg />,
       description: t("Skills.postgres"),
     },
   ];
@@ -83,20 +83,21 @@ const Home = () => {
 
           {/* Boton ver CV */}
           <a
-            href="/pdf/j-caggiano-cv.pdf"
+            href={localActive === "es" ? "/pdf/j-caggiano-cv-esp.pdf" : "/pdf/j-caggiano-cv-eng.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 w-fit text-center py-3 px-4 mt-5 border-2 border-blue-light hover:bg-gradient-to-r from-blue-dark to-blue-light rounded-xl hover:border-black"
           >
             {t("Home.viewCV")}
 
-            <Image
+            <EyeSvg />
+            {/* <Image
               src={EyeLogo}
               width={20}
               height={20}
               className="mb-[1.5px] ml-1"
               alt="eye logo"
-            />
+            /> */}
           </a>
         </div>
 

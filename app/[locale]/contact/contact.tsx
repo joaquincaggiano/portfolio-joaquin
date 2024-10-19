@@ -1,9 +1,8 @@
 "use client";
+
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import GmailLogo from "@/public/icons/gmail.svg";
-import LinkedinLogo from "@/public/icons/linkedin.svg";
-// import PhoneLogo from "@/public/icons//wpp.svg";
+import GmailSvg from "@/components/icons/gmail-svg";
+import LinkedinSvg from "@/components/icons/linkedin-svg";
 
 const Contact = () => {
   const t = useTranslations();
@@ -31,7 +30,7 @@ const Contact = () => {
             href="mailto:joaquincaggiano@gmail.com"
             className="w-full max-w-[200px] flex flex-col justify-center items-center gap-2.5 text-transparent bg-clip-text bg-gradient-to-r from-white to-[#DB4437] hover:text-[#DB4437]"
           >
-            <Image src={GmailLogo} width={60} height={60} alt="gmail" />
+            <GmailSvg />
             <span className=" font-semibold text-base">
               {t("Contact.sendEmail")}
             </span>
@@ -55,7 +54,7 @@ const Contact = () => {
             target="_blank"
             className="w-full max-w-[200px] flex flex-col justify-center items-center gap-2.5 text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#0E76A8] hover:text-[#00D4FF]"
           >
-            <Image src={LinkedinLogo} width={60} height={60} alt="linkedin" />
+            <LinkedinSvg />
             <span className=" font-semibold text-base">
               {t("Contact.visitProfile")}
             </span>

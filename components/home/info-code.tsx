@@ -27,7 +27,7 @@ const InfoCode = () => {
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>{t("age")}:</span>{" "}
-      <span className="text-orange-400">&#39;25&#39;</span>,
+      <span className="text-orange-400">&#39;27&#39;</span>,
       <br />
       {"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
       <span style={{ color: pallete.blueLight1 }}>{t("languages")}:</span>{" "}

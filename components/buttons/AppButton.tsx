@@ -20,6 +20,8 @@ interface AppButtonProps {
   width?: number;
   height?: number;
   children?: React.ReactNode;
+  startContent?: React.ReactNode
+  endContent?: React.ReactNode
 }
 
 export default function AppButton(props: AppButtonProps) {
@@ -34,6 +36,8 @@ export default function AppButton(props: AppButtonProps) {
     variant,
     width,
     height,
+    startContent,
+    endContent
   } = props;
 
   return (
@@ -43,6 +47,8 @@ export default function AppButton(props: AppButtonProps) {
       isDisabled={disabled}
       isLoading={loading}
       className={className}
+      startContent={startContent}
+      endContent={endContent}
     >
       {icon && (
         <Image
